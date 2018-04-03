@@ -1,7 +1,9 @@
-package com.curry.android.android_collection;
+package com.curry.android.android_collection.activity;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
+
+import com.curry.android.android_collection.R;
 
 public class MainActivity extends AppCompatActivity {
 
