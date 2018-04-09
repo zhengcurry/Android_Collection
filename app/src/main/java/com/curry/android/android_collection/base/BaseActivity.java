@@ -11,6 +11,8 @@ import android.widget.LinearLayout;
 import com.curry.android.android_collection.R;
 import com.gyf.barlibrary.ImmersionBar;
 
+import butterknife.ButterKnife;
+
 /**
  * @author curry
  * created at 2018/4/3 11:54
@@ -32,10 +34,15 @@ public abstract class BaseActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         super.setContentView(R.layout.base_layout);
         setContentView();
+        /*******注册要在setContentView之后*****/
+        ButterKnife.bind(this);
         immersionBar = ImmersionBar.with(this);
-        immersionBar.statusBarView(R.id.top_view)
-                .statusBarDarkFont(true,0.2f)
-                .statusBarColor(R.color.white).init();
+        immersionBar
+                .statusBarView(R.id.top_view)
+                .statusBarDarkFont(true, 0.2f)
+                .statusBarColor(R.color.white)
+                .keyboardEnable(true)
+                .init();
     }
 
     /**
