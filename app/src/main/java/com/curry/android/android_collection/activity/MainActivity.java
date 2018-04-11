@@ -24,11 +24,14 @@ public class MainActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
     }
 
-    @OnClick(R.id.btn_test_immersion)
+    @OnClick({R.id.btn_test_immersion, R.id.btn_chart})
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.btn_test_immersion:
                 startActivity(new Intent(this, TestImmersionActivity.class));
+                break;
+            case R.id.btn_chart:
+                startActivity(new Intent(this, ChartActivity.class));
                 break;
         }
     }
