@@ -25,7 +25,11 @@ import com.github.mikephil.charting.interfaces.datasets.ILineDataSet;
 import com.github.mikephil.charting.utils.ColorTemplate;
 import com.github.mikephil.charting.utils.Utils;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
+import java.util.Locale;
+import java.util.concurrent.TimeUnit;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -36,7 +40,7 @@ import butterknife.OnClick;
  * created at 2018/4/9 18:17
  * @desc 集成图表
  */
-public class ChartActivity extends AppCompatActivity {
+public class LineChartActivity extends AppCompatActivity {
 
     @BindView(R.id.line_chart)
     MyLineChart lineChart;
@@ -136,27 +140,39 @@ public class ChartActivity extends AppCompatActivity {
         xAxis.setPosition(XAxis.XAxisPosition.BOTTOM);  //文字位置
         xAxis.enableGridDashedLine(10f, 10f, 0f);//绘制网格虚线1.线长，2.虚线间距，3.虚线开始坐标
         xAxis.setDrawLimitLinesBehindData(false);
-        xAxis.setLabelCount(12);
+        xAxis.setLabelCount(24);
         xAxis.setGranularity(1f);            //间隔尺寸
-//        xAxis.setValueFormatter(new YearXAxisFormatter());
+        xAxis.setValueFormatter(new IAxisValueFormatter() {
+            private SimpleDateFormat mFormat = new SimpleDateFormat("HH:mm");
+
+            @Override
+            public String getFormattedValue(float value, AxisBase axis) {
+                long millis = TimeUnit.MINUTES.toMillis((long) value) + 57600000;
+                return mFormat.format(new Date(millis));
+            }
+        });
+
 //        xAxis.setXOffset(100f);
 //        xAxis.setYOffset(50f);              //刻度与轴的距离
         xAxis.setAxisMinimum(0f);         //最小值
-        xAxis.setAxisMaximum(24f);        //最大值
+        xAxis.setAxisMaximum(1440f);        //最大值
 //        xAxis.setCenterAxisLabels(true);  //设置标签居中--不能和固定标签同时使用
-//        xAxis.setTypeface(mTfLight);//设置字型
+//        xAxis.setTypeface(mTfLight);/设置字型
 //        xAxis.setGridDashedLine(new DashPathEffect(new float[]{10f, 10f}, 0f));//绘制网格虚线
 //        xAxis.setGridColor(Color.parseColor("#FF29F59A"));//设置网格线颜色
 //        xAxis.setValueFormatter(new MyCustomXAxisValueFormatter());
 //        xAxis.addLimitLine(LimitLine); // add x-axis limit line
     }
 
+    /**
+     * 不设置值的范围会动态计算
+     */
     private void setYAxis() {
         lineChart.getAxisRight().setEnabled(false);
         YAxis leftAxis = lineChart.getAxisLeft();
         leftAxis.removeAllLimitLines(); // reset all limit lines to avoid overlapping lines
-        leftAxis.setAxisMaximum(100f);  //Y轴最大值
-        leftAxis.setAxisMinimum(0f);  //Y轴最小值
+//        leftAxis.setAxisMaximum(100f);  //Y轴最大值
+//        leftAxis.setAxisMinimum(0f);  //Y轴最小值
         leftAxis.setDrawAxisLine(false);//是否画轴线
         leftAxis.setDrawZeroLine(false);
         leftAxis.setTextColor(Color.WHITE);
@@ -167,13 +183,13 @@ public class ChartActivity extends AppCompatActivity {
         leftAxis.setDrawLimitLinesBehindData(true);
         leftAxis.setYOffset(-6f);       //Y轴刻度向上平移
         leftAxis.setXOffset(-20f);      //Y轴刻度向右平移
-        leftAxis.setLabelCount(5);
-        leftAxis.setValueFormatter(new IAxisValueFormatter() {
-            @Override
-            public String getFormattedValue(float value, AxisBase axis) {
-                return (int) value + "%";
-            }
-        });
+//        leftAxis.setLabelCount(5);
+//        leftAxis.setValueFormatter(new IAxisValueFormatter() {
+//            @Override
+//            public String getFormattedValue(float value, AxisBase axis) {
+//                return (int) value + "%";
+//            }
+//        });
     }
 
     @Override
@@ -218,6 +234,8 @@ public class ChartActivity extends AppCompatActivity {
             lineSet.setValueTextSize(12f);          //设置坐标值的文字大小
             lineSet.setValueTextColor(Color.WHITE); //设置坐标值的颜色
             lineSet.setMode(LineDataSet.Mode.CUBIC_BEZIER); //设置线的样式
+            lineSet.setHighlightEnabled(false);
+//            lineSet.setCubicIntensity(0f);                //设置线的紧度
 //            lineSet.enableDashedLine(10f, 5f, 0f);        //虚线
 //            lineSet.enableDashedHighlightLine(10f, 5f, 0f);   //高亮虚线
 //            lineSet.setFormLineWidth(5f);

@@ -6,30 +6,30 @@
     tools:context=".activity.MainActivity">
 
     <Button
-        android:id="@+id/btn_chart"
+        android:id="@+id/btn_line_chart"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="图表" />
+        android:text="折线图" />
 
     <Button
-        android:id="@+id/btn1"
+        android:id="@+id/btn_bar_chart"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/btn_chart"
-        android:text="test" />
+        android:layout_below="@id/btn_line_chart"
+        android:text="柱状图" />
 
     <Button
-        android:id="@+id/btn2"
+        android:id="@+id/btn_combined_chart"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/btn1"
-        android:text="test" />
+        android:layout_below="@id/btn_bar_chart"
+        android:text="复合图" />
 
     <Button
         android:id="@+id/btn3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/btn2"
+        android:layout_below="@id/btn_combined_chart"
         android:text="test" />
 
     <Button
