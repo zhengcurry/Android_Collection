@@ -1,4 +1,4 @@
-package com.curry.android.android_collection.activity;
+package com.curry.android.android_collection.activity.chart;
 
 import android.graphics.Color;
 import android.graphics.drawable.Drawable;

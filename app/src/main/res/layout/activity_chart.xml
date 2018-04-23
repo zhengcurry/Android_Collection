@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activity.LineChartActivity">
+    tools:context=".activity.chart.LineChartActivity">
     <!--android:background="@color/dark"-->
 
     <com.curry.android.android_collection.chart.MyLineChart

@@ -21,16 +21,11 @@
             android:theme="@style/TranslucentTheme"
             android:windowSoftInputMode="stateHidden" />
         <activity
-            android:name=".activity.LineChartActivity"
-            android:screenOrientation="landscape">
-
-        </activity>
-        <activity android:name=".activity.BarChartActivity">
-
-        </activity>
-        <activity android:name=".activity.CombinedChartActivity">
-
-        </activity>
+            android:name=".activity.chart.LineChartActivity"
+            android:screenOrientation="landscape"></activity>
+        <activity android:name=".activity.chart.BarChartActivity"></activity>
+        <activity android:name=".activity.chart.CombinedChartActivity"></activity>
+        <activity android:name=".activity.CanvasActivity"></activity>
     </application>
 
 </manifest>

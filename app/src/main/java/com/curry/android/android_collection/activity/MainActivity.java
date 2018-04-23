@@ -5,6 +5,9 @@ import android.os.Bundle;
 import android.view.View;
 
 import com.curry.android.android_collection.R;
+import com.curry.android.android_collection.activity.chart.BarChartActivity;
+import com.curry.android.android_collection.activity.chart.CombinedChartActivity;
+import com.curry.android.android_collection.activity.chart.LineChartActivity;
 import com.curry.android.android_collection.base.BaseActivity;
 
 import butterknife.OnClick;
@@ -21,7 +24,8 @@ public class MainActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
     }
 
-    @OnClick({R.id.btn_test_immersion, R.id.btn_line_chart, R.id.btn_bar_chart, R.id.btn_combined_chart})
+    @OnClick({R.id.btn_test_immersion, R.id.btn_line_chart, R.id.btn_bar_chart,
+            R.id.btn_combined_chart, R.id.btn_view  })
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.btn_test_immersion:
@@ -35,6 +39,9 @@ public class MainActivity extends BaseActivity {
                 break;
             case R.id.btn_combined_chart:
                 startActivity(new Intent(this, CombinedChartActivity.class));
+                break;
+            case R.id.btn_view:
+                startActivity(new Intent(this, CanvasActivity.class));
                 break;
         }
     }

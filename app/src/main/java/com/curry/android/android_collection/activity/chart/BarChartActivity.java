@@ -1,4 +1,4 @@
-package com.curry.android.android_collection.activity;
+package com.curry.android.android_collection.activity.chart;
 
 import android.annotation.SuppressLint;
 import android.graphics.Color;

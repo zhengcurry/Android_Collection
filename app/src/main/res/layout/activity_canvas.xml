@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.curry.android.android_collection.views.MyView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.CanvasActivity">
+
+</com.curry.android.android_collection.views.MyView>

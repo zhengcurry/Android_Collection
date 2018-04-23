@@ -26,11 +26,11 @@
         android:text="复合图" />
 
     <Button
-        android:id="@+id/btn3"
+        android:id="@+id/btn_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/btn_combined_chart"
-        android:text="test" />
+        android:text="自定义View" />
 
     <Button
         android:id="@+id/btn_test_immersion"
