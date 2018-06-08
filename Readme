@@ -1,0 +1,10 @@
+//TODO
+    2018年6月6日 - 2018年6月30日
+    1. Activity管理Util,加入高版本权限处理,等主要工具类
+    2. 适配、常用UI框架，如：BRAVH，等(角标、侧滑栏、底部状态栏、fragment、label、star、二维码...)
+    3. 网络请求(OKHttp、Retrofit)、数据库
+    4. gradle ：多渠道打包 等
+    5. 三方：推送、地图、支付 等
+
+    6. MVP MVVM(DataBing)
+    7. Kotlin
