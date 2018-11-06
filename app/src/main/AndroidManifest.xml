@@ -24,10 +24,11 @@
             android:windowSoftInputMode="stateHidden" />
         <activity
             android:name=".activity.chart.LineChartActivity"
-            android:screenOrientation="landscape"></activity>
-        <activity android:name=".activity.chart.BarChartActivity"></activity>
-        <activity android:name=".activity.chart.CombinedChartActivity"></activity>
-        <activity android:name=".activity.CanvasActivity"></activity>
+            android:screenOrientation="landscape" />
+        <activity android:name=".activity.chart.BarChartActivity" />
+        <activity android:name=".activity.chart.CombinedChartActivity" />
+        <activity android:name=".activity.CanvasActivity" />
+        <activity android:name=".activity.PhotoActivity"></activity>
     </application>
 
 </manifest>
