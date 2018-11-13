@@ -3,12 +3,16 @@ package com.curry.android.android_collection.activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.TextView;
 
 import com.curry.android.android_collection.R;
 import com.curry.android.android_collection.activity.chart.BarChartActivity;
 import com.curry.android.android_collection.activity.chart.CombinedChartActivity;
 import com.curry.android.android_collection.activity.chart.LineChartActivity;
 import com.curry.android.android_collection.base.BaseActivity;
+import com.example.makejarlibrary.MakeJar;
+
+import org.w3c.dom.Text;
 
 import butterknife.OnClick;
 
@@ -22,6 +26,9 @@ public class MainActivity extends BaseActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        TextView test = findViewById(R.id.text);
+        test.setText(MakeJar.getStr());
     }
 
     @OnClick({R.id.btn_test_immersion, R.id.btn_line_chart, R.id.btn_bar_chart,

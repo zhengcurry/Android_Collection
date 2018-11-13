@@ -39,6 +39,12 @@
         android:layout_centerInParent="true"
         android:text="沉浸式状态栏" />
 
+    <TextView
+        android:id="@+id/text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btn_test_immersion" />
+
     <EditText
         android:id="@+id/editText"
         android:layout_width="match_parent"
