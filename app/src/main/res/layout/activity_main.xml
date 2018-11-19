@@ -33,6 +33,13 @@
         android:text="自定义View" />
 
     <Button
+        android:id="@+id/btn_change"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btn_view"
+        android:text="@string/change_language" />
+
+    <Button
         android:id="@+id/btn_test_immersion"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

@@ -1,6 +1,7 @@
 package com.curry.android.android_collection.base;
 
 import android.content.Context;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
@@ -13,13 +14,16 @@ import android.widget.EditText;
 import android.widget.LinearLayout;
 
 import com.curry.android.android_collection.R;
+import com.curry.android.android_collection.uitls.MyContextWrapper;
 import com.gyf.barlibrary.ImmersionBar;
+
+import java.util.Locale;
 
 import butterknife.ButterKnife;
 
 /**
  * @author curry
- *         created at 2018/4/3 11:54
+ * created at 2018/4/3 11:54
  * @desc OK
  */
 public abstract class BaseActivity extends AppCompatActivity {
@@ -65,6 +69,18 @@ public abstract class BaseActivity extends AppCompatActivity {
                 new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT,
                         ViewGroup.LayoutParams.MATCH_PARENT));
         initToolbar();
+    }
+
+    @Override
+    protected void attachBaseContext(Context newBase) {
+        SharedPreferences sharedPreferences =
+                newBase.getSharedPreferences("curry", MODE_PRIVATE);
+
+        Locale newLocale = new Locale(sharedPreferences.getString("language", "cn"));
+        // .. create or get your new Locale object here.
+
+        Context context = MyContextWrapper.wrap(newBase, newLocale);
+        super.attachBaseContext(context);
     }
 
     private void initToolbar() {
