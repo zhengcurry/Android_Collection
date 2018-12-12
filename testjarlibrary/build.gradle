@@ -1,13 +1,17 @@
 apply plugin: 'com.android.library'
 
+//android配置
+def config = rootProject.ext.android
+
+//相关库依赖
+def library = rootProject.ext.supportDependencies
+
 android {
-    compileSdkVersion 27
-
-
+    compileSdkVersion config.compileSdkVersion
 
     defaultConfig {
-        minSdkVersion 19
-        targetSdkVersion 27
+        minSdkVersion config.minSdkVersion
+        targetSdkVersion config.targetSdkVersion
         versionCode 1
         versionName "1.0"
 
@@ -25,10 +29,9 @@ android {
 }
 
 dependencies {
-    implementation fileTree(dir: 'libs', include: ['*.jar'])
-
-    implementation 'com.android.support:appcompat-v7:27.1.1'
-    testImplementation 'junit:junit:4.12'
-    androidTestImplementation 'com.android.support.test:runner:1.0.2'
-    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation library.supportAppcompatV7
+    testImplementation "junit:junit:$config.junitVersion"
+    androidTestImplementation "com.android.support.test:runner:$config.runnerVersion"
+    androidTestImplementation "com.android.support.test.espresso:espresso-core:$config.espressoVersion"
 }

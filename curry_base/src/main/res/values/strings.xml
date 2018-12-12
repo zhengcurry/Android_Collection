@@ -1,0 +1,6 @@
+<resources>
+    <item name="tag_key_data" type="id" />
+    <item name="tag_key_position" type="id" />
+
+    <string name="app_name">curry_base</string>
+</resources>

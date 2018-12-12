@@ -1,0 +1,54 @@
+<resources>
+    <dimen name="default_con">4dp</dimen>
+
+    <dimen name="base_dimen_4dp">4dp</dimen>
+    <dimen name="base_dimen_6dp">6dp</dimen>
+    <dimen name="base_dimen_8dp">8dp</dimen>
+    <dimen name="base_dimen_10dp">10dp</dimen>
+    <dimen name="base_dimen_12dp">12dp</dimen>
+    <dimen name="base_dimen_14dp">14dp</dimen>
+    <dimen name="base_dimen_16dp">16dp</dimen>
+    <dimen name="base_dimen_18dp">18dp</dimen>
+    <dimen name="base_dimen_20dp">20dp</dimen>
+    <dimen name="base_dimen_22dp">22dp</dimen>
+    <dimen name="base_dimen_24dp">24dp</dimen>
+    <dimen name="base_dimen_26dp">26dp</dimen>
+    <dimen name="base_dimen_28dp">28dp</dimen>
+    <dimen name="base_dimen_30dp">30dp</dimen>
+    <dimen name="base_dimen_32dp">32dp</dimen>
+    <dimen name="base_dimen_34dp">34dp</dimen>
+    <dimen name="base_dimen_36dp">36dp</dimen>
+    <dimen name="base_dimen_40dp">40dp</dimen>
+    <dimen name="base_dimen_44dp">44dp</dimen>
+    <dimen name="base_dimen_46dp">46dp</dimen>
+    <dimen name="base_dimen_48dp">48dp</dimen>
+    <dimen name="base_dimen_50dp">50dp</dimen>
+    <dimen name="base_dimen_52dp">52dp</dimen>
+    <dimen name="base_dimen_54dp">54dp</dimen>
+    <dimen name="base_dimen_56dp">56dp</dimen>
+    <dimen name="base_dimen_60dp">60dp</dimen>
+    <dimen name="base_dimen_62dp">62dp</dimen>
+    <dimen name="base_dimen_64dp">64dp</dimen>
+    <dimen name="base_dimen_70dp">70dp</dimen>
+    <dimen name="base_dimen_72dp">72dp</dimen>
+    <dimen name="base_dimen_80dp">80dp</dimen>
+    <dimen name="base_dimen_84dp">84dp</dimen>
+    <dimen name="base_dimen_86dp">86dp</dimen>
+    <dimen name="base_dimen_90dp">90dp</dimen>
+    <dimen name="base_dimen_100dp">100dp</dimen>
+    <dimen name="base_dimen_110dp">110dp</dimen>
+    <dimen name="base_dimen_152dp">152dp</dimen>
+
+    //text size
+    <dimen name="base_dimen_8sp">8sp</dimen>
+    <dimen name="base_dimen_9sp">9sp</dimen>
+    <dimen name="base_dimen_10sp">10sp</dimen>
+    <dimen name="base_dimen_11sp">11sp</dimen>
+    <dimen name="base_dimen_12sp">12sp</dimen>
+    <dimen name="base_dimen_13sp">13sp</dimen>
+    <dimen name="base_dimen_14sp">14sp</dimen>
+    <dimen name="base_dimen_15sp">15sp</dimen>
+    <dimen name="base_dimen_16sp">16sp</dimen>
+    <dimen name="base_dimen_18sp">18sp</dimen>
+    <dimen name="base_dimen_24sp">24sp</dimen>
+</resources>
