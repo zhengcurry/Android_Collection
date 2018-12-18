@@ -67,10 +67,13 @@ dependencies {
     api "io.reactivex.rxjava2:rxandroid:$config.rxandroid"
     api "io.reactivex.rxjava2:rxjava:$config.rxjava"
 
+    /** 数据库 **/
+    api 'org.litepal.android:java:3.0.0'
+
+    /***其他三方***/
     //工具栏：https://github.com/H07000223/FlycoTabLayout
     //    implementation 'com.flyco.tablayout:FlycoTabLayout_Lib:2.1.2@aar'
 
-    /***三方***/
     //仿ios选择器
     api 'com.contrarywind:Android-PickerView:4.1.6'
     //沉浸式状态栏

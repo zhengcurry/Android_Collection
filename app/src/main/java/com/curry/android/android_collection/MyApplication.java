@@ -1,6 +1,7 @@
 package com.curry.android.android_collection;
 
-import com.heinqi.curry_base.base.BaseApplication;
+
+import com.curry.basic.base.BaseApplication;
 
 public class MyApplication extends BaseApplication {
 
