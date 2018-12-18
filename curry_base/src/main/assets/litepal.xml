@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<litepal>
+    <!--设定数据库的名字-->
+    <dbname value="curry"></dbname>
+
+    <!--设定数据库的版本号[需要纯数字]-->
+    <version value="2"></version>
+
+    <!--用于设定所有的映射模型-->
+    <list>
+        <mapping class="com.curry.basic.test.TestBean"></mapping>
+        <mapping class="com.curry.basic.test.AllBean"></mapping>
+        <mapping class="com.curry.basic.test.ChildBean"></mapping>
+        <mapping class="com.curry.basic.test.OnlyBean"></mapping>
+    </list>
+</litepal>

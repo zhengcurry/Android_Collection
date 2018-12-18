@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--自定义button-->
+    <declare-styleable name="CustomButton">
+        <attr name="corner" format="dimension" />
+        <attr name="press_color" format="reference|color" />
+        <attr name="normal_color" format="reference|color" />
+        <attr name="stroke_width" format="dimension" />
+        <attr name="stroke_color" format="reference|color" />
+        <attr name="center" format="boolean" />
+        <attr name="type">
+            <enum name="base" value="1" />
+            <enum name="white" value="2" />
+        </attr>
+    </declare-styleable>
+
+
+    <!--标签布局-->
+    <declare-styleable name="labels_view">
+        <attr name="selectType" format="enum">
+            <enum name="NONE" value="1" />
+            <enum name="SINGLE" value="2" />
+            <enum name="SINGLE_IRREVOCABLY" value="3" />
+            <enum name="MULTI" value="4" />
+        </attr>
+        <attr name="maxSelect" format="integer" />
+        <attr name="labelTextColor" format="reference" />
+        <attr name="labelTextSize" format="dimension" />
+        <attr name="labelTextPaddingLeft" format="dimension" />
+        <attr name="labelTextPaddingTop" format="dimension" />
+        <attr name="labelTextPaddingRight" format="dimension" />
+        <attr name="labelTextPaddingBottom" format="dimension" />
+        <attr name="lineMargin" format="dimension" />
+        <attr name="wordMargin" format="dimension" />
+        <attr name="labelBackground" format="reference" />
+        <attr name="columnsNumber" format="integer" />  <!--列数(当model为true可用)-->
+        <attr name="model" format="boolean" />          <!--样式(true:固定列数样式、false:瀑布流样式)-->
+        <attr name="showDrawable" format="boolean" />          <!--显示drawable-->
+        <attr name="showDrawableId" format="reference" />      <!--显示drawable的资源-->
+    </declare-styleable>
+
+    <!--星级-->
+    <declare-styleable name="SimpleRatingBar">
+        <attr name="srb_borderColor" format="color" /><!--星星的边框颜色-->
+        <attr name="srb_fillColor" format="color" /><!--星星选中填充的颜色-->
+        <attr name="srb_backgroundColor" format="color" /><!--星星的背景颜色-->
+        <attr name="srb_starBackgroundColor" format="color" /><!--星星的背景颜色-->
+        <attr name="srb_pressedBorderColor" format="color" /><!--按压时边框的颜色-->
+        <attr name="srb_pressedFillColor" format="color" /><!--按压时填充的颜色-->
+        <attr name="srb_pressedBackgroundColor" format="color" /><!--按压时view背景的颜色-->
+        <attr name="srb_pressedStarBackgroundColor" format="color" /><!--按压时星星填充的颜色-->
+        <attr name="srb_numberOfStars" format="integer" /><!--星星的数量-->
+        <attr name="srb_starSize" format="dimension" /><!--星星的大小-->
+        <attr name="srb_maxStarSize" format="dimension" /><!--最大值-->
+        <attr name="srb_starsSeparation" format="dimension" /><!--星星的间隔-->
+        <attr name="srb_starBorderWidth" format="float" /><!--星星边框的宽度-->
+        <attr name="srb_starCornerRadius" format="float" /><!--星星的弧度-->
+        <attr name="srb_isIndicator" format="boolean" />  <!--是否可编辑-->
+        <attr name="srb_rating" format="float" /><!---->
+        <attr name="srb_stepSize" format="float" /><!--步长-->
+        <attr name="srb_drawBorderEnabled" format="boolean" /><!--是否有边框-->
+        <attr name="srb_gravity" format="enum"><!--从左开始，或从右开始-->
+            <enum name="left" value="0" />
+            <enum name="right" value="1" />
+        </attr>
+    </declare-styleable>
+
+    <!--Banner-->
+    <declare-styleable name="Banner">
+        <attr name="delay_time" format="integer" />
+        <attr name="scroll_time" format="integer" />
+        <attr name="is_auto_play" format="boolean" />
+        <attr name="title_background" format="color|reference" />
+        <attr name="title_textcolor" format="color" />
+        <attr name="title_textsize" format="dimension" />
+        <attr name="title_height" format="dimension" />
+        <attr name="indicator_width" format="dimension" />
+        <attr name="indicator_height" format="dimension" />
+        <attr name="indicator_margin" format="dimension" />
+        <attr name="indicator_drawable_selected" format="reference" />
+        <attr name="indicator_drawable_unselected" format="reference" />
+        <attr name="layout_id" format="reference" />
+        <attr name="image_scale_type" format="enum">
+            <enum name="center" value="0" />
+            <enum name="center_crop" value="1" />
+            <enum name="center_inside" value="2" />
+            <enum name="fit_center" value="3" />
+            <enum name="fit_end" value="4" />
+            <enum name="fit_start" value="5" />
+            <enum name="fit_xy" value="6" />
+            <enum name="matrix" value="7" />
+        </attr>
+        <!--<attr name="indicator_animator" format="reference" />-->
+        <!--<attr name="indicator_animator_reverse" format="reference" />-->
+    </declare-styleable>
+</resources>

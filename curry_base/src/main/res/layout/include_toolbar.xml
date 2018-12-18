@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:toolbar="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/toolbar"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/color_white"
+    android:elevation="2dp"
+    android:minHeight="?attr/actionBarSize"
+    toolbar:contentInsetEnd="0dp"
+    toolbar:contentInsetLeft="0dp"
+    toolbar:contentInsetRight="0dp"
+    toolbar:contentInsetStart="0dp">
+
+    <TextView
+        android:id="@+id/toolbar_title"
+        style="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:ellipsize="end"
+        android:lines="1"
+        android:scrollHorizontally="true"
+        android:textColor="@color/color_333333"
+        android:textSize="@dimen/base_dimen_18sp"
+        tools:text="标题" />
+
+    <ImageView
+        android:id="@+id/img_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right|center_vertical"
+        android:layout_marginRight="15dp"
+        android:src="@mipmap/top_search_icon"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/tv_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right|center_vertical"
+        android:layout_marginRight="10dp"
+        android:textColor="@color/color_38B59B"
+        android:textSize="@dimen/base_dimen_16sp"
+        android:visibility="gone"
+        tools:text="保存" />
+
+    <TextView
+        android:id="@+id/tv_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left|center_vertical"
+        android:layout_marginLeft="10dp"
+        android:textColor="@color/color_999999"
+        android:textSize="@dimen/base_dimen_16sp"
+        android:visibility="gone"
+        tools:text="取消" />
+</android.support.v7.widget.Toolbar>
