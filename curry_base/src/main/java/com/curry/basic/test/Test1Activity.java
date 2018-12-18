@@ -15,7 +15,6 @@ import org.greenrobot.eventbus.EventBus;
 import org.greenrobot.eventbus.Subscribe;
 import org.greenrobot.eventbus.ThreadMode;
 import org.litepal.LitePal;
-import org.litepal.crud.LitePalSupport;
 import org.litepal.tablemanager.Connector;
 
 import java.util.ArrayList;
@@ -102,6 +101,8 @@ public class Test1Activity extends AppCompatActivity implements View.OnClickList
         LitePal.average(TestBean.class, "test");//求平均值
         LitePal.max(TestBean.class, "test", int.class);//求最大
         LitePal.min(TestBean.class, "test", int.class);//求最小*/
+
+        mButton.setText(LitePal.find(TestBean.class, 1).getText());
     }
 
     private void initView() {

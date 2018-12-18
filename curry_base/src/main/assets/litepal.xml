@@ -4,7 +4,7 @@
     <dbname value="curry"></dbname>
 
     <!--设定数据库的版本号[需要纯数字]-->
-    <version value="1"></version>
+    <version value="2"></version>
 
     <!--用于设定所有的映射模型-->
     <list>

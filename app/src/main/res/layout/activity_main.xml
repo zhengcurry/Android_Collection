@@ -52,6 +52,12 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/btn_test_immersion" />
 
+    <TextView
+        android:id="@+id/tv_show_db"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/text" />
+
     <EditText
         android:id="@+id/editText"
         android:layout_width="match_parent"
