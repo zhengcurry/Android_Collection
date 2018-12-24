@@ -4,9 +4,9 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.res.Configuration;
 import android.content.res.Resources;
-import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.util.DisplayMetrics;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.TextView;
 
@@ -16,11 +16,11 @@ import com.curry.android.android_collection.activity.chart.CombinedChartActivity
 import com.curry.android.android_collection.activity.chart.LineChartActivity;
 import com.curry.android.android_collection.base.BaseActivity;
 import com.curry.basic.test.TestBean;
+import com.curry.basic.widget.BackgroundDarkPopupWindow;
 import com.example.makejarlibrary.MakeJar;
 
 import org.litepal.LitePal;
 import org.litepal.tablemanager.Connector;
-import org.w3c.dom.Text;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -46,6 +46,10 @@ public class MainActivity extends BaseActivity {
         test.setText(MakeJar.getStr());
         tvShowDb.setText(LitePal.find(TestBean.class, 1).getText());
 
+
+        BackgroundDarkPopupWindow mPopupWindow = BackgroundDarkPopupWindow
+                .setPopupWindow(LayoutInflater.from(this)
+                        .inflate(R.layout.test, null), test);
     }
 
     private void testDB() {
