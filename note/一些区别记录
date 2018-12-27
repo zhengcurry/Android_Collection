@@ -1,0 +1,7 @@
+- **for(;;)和while(true)**　[链接](https://blog.csdn.net/rexct392358928/article/details/53813963)
+
+    for (；；)指令少，不占用寄存器，而且没有判断跳转，比while (1)好
+编译前              编译后
+while (1)；        mov eax,1  test eax,eax je foo+23h jmp foo+18h
+编译前              编译后
+for (；；)；        jmp foo+23h 　
