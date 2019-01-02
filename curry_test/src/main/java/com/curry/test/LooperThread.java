@@ -25,30 +25,20 @@ public class LooperThread extends Thread {
             }
         };
 
+        Message message = Message.obtain(handler, 0, "test");
+        Bundle bundle = new Bundle();
+        message.setData(bundle);
+        handler.sendMessageDelayed(message, 1000);
+
         // 开始循环处理消息队列
         Looper.loop();
     }
 
-    public void test() {
-        Thread thread = new Thread(new Runnable() {
-            @Override
-            public void run() {
-//                Message message = new Message();
-//                message.what = 1;
-                Message message = Message.obtain(handler, 0, "test");
-                Bundle bundle = new Bundle();
-                message.setData(bundle);
-                handler.sendMessageDelayed(message, 1000);
-            }
-        });
-        thread.start();
-    }
-
     public static void main(String[] args) {
         LooperThread looperThread = new LooperThread();
-        looperThread.run();
-        looperThread.test();
+        looperThread.start();
     }
+
 }
 
 
