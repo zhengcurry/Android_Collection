@@ -1,5 +1,6 @@
 package com.curry.android.android_collection.activity;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.res.Configuration;
@@ -7,6 +8,7 @@ import android.content.res.Resources;
 import android.os.Bundle;
 import android.util.DisplayMetrics;
 import android.view.LayoutInflater;
+import android.view.MotionEvent;
 import android.view.View;
 import android.widget.TextView;
 
@@ -47,9 +49,7 @@ public class MainActivity extends BaseActivity {
         tvShowDb.setText(LitePal.find(TestBean.class, 1).getText());
 
 
-        BackgroundDarkPopupWindow mPopupWindow = BackgroundDarkPopupWindow
-                .setPopupWindow(LayoutInflater.from(this)
-                        .inflate(R.layout.test, null), test);
+        test();
     }
 
     private void testDB() {
@@ -60,7 +60,7 @@ public class MainActivity extends BaseActivity {
         boolean flag = testBean.save();
         //抛出异常
         testBean.saveThrows();
-        
+
         /**直接保存多个实体类**/
         List<TestBean> testBeanList = new ArrayList<>();
         testBeanList.add(new TestBean("testDB2"));
@@ -117,6 +117,28 @@ public class MainActivity extends BaseActivity {
         }
         editor.commit();
     }
+
+
+    private void test() {
+        getWindow().getDecorView();
+        TextView textView = findViewById(R.id.test);
+        textView.scrollBy(100, 100);
+        textView.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                return false;
+            }
+        });
+
+//        textView.onTouchEvent(MotionEvent.ACTION_DOWN);
+    }
+
+    @Override
+    public boolean dispatchTouchEvent(MotionEvent ev) {
+        return super.dispatchTouchEvent(ev);
+    }
+
+
 }
 
 
