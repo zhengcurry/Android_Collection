@@ -68,4 +68,5 @@ dependencies {
     implementation files('libs/TestJar_V1.0.jar')
     implementation project(':curry_base')
     implementation project(':qrcodelib')
+    implementation project(':curry_kotlin')
 }

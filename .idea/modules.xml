@@ -6,6 +6,7 @@
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/curry_base/curry_base.iml" filepath="$PROJECT_DIR$/curry_base/curry_base.iml" />
       <module fileurl="file://$PROJECT_DIR$/curry_db/curry_db.iml" filepath="$PROJECT_DIR$/curry_db/curry_db.iml" />
+      <module fileurl="file://$PROJECT_DIR$/curry_kotlin/curry_kotlin.iml" filepath="$PROJECT_DIR$/curry_kotlin/curry_kotlin.iml" />
       <module fileurl="file://$PROJECT_DIR$/curry_test/curry_test.iml" filepath="$PROJECT_DIR$/curry_test/curry_test.iml" />
       <module fileurl="file://$PROJECT_DIR$/makejarlibrary/makejarlibrary.iml" filepath="$PROJECT_DIR$/makejarlibrary/makejarlibrary.iml" />
       <module fileurl="file://$PROJECT_DIR$/qrcodelib/qrcodelib.iml" filepath="$PROJECT_DIR$/qrcodelib/qrcodelib.iml" />

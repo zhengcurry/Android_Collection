@@ -20,6 +20,7 @@ import com.curry.android.android_collection.base.BaseActivity;
 import com.curry.basic.test.TestBean;
 import com.curry.basic.widget.BackgroundDarkPopupWindow;
 import com.example.makejarlibrary.MakeJar;
+import com.heinqi.curry_kotlin.KtMainActivity;
 
 import org.litepal.LitePal;
 import org.litepal.tablemanager.Connector;
@@ -70,7 +71,7 @@ public class MainActivity extends BaseActivity {
     }
 
     @OnClick({R.id.btn_test_immersion, R.id.btn_line_chart, R.id.btn_bar_chart,
-            R.id.btn_combined_chart, R.id.btn_view, R.id.btn_change})
+            R.id.btn_combined_chart, R.id.btn_view, R.id.btn_change, R.id.btn_skip_to_kotlin})
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.btn_test_immersion:   //沉浸式状态栏
@@ -88,7 +89,10 @@ public class MainActivity extends BaseActivity {
             case R.id.btn_view:             //自定义View
                 startActivity(new Intent(this, CanvasActivity.class));
                 break;
-            case R.id.btn_change:             //自定义View
+            case R.id.btn_skip_to_kotlin:   //自定义View
+                startActivity(new Intent(this, KtMainActivity.class));
+                break;
+            case R.id.btn_change:           //自定义View
 //                changeLanguage();
                 saveLanguage();
                 recreate();
