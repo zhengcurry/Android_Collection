@@ -1,76 +1,83 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".activity.MainActivity">
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:context=".activity.MainActivity">
 
     <Button
         android:id="@+id/btn_line_chart"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="折线图" />
+        android:onClick="onClickEvent"
+        android:text="折线图"/>
 
     <Button
         android:id="@+id/btn_bar_chart"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/btn_line_chart"
-        android:text="柱状图" />
+        android:onClick="onClickEvent"
+        android:text="柱状图"/>
 
     <Button
         android:id="@+id/btn_combined_chart"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/btn_bar_chart"
-        android:text="复合图" />
+        android:onClick="onClickEvent"
+        android:text="复合图"/>
 
     <Button
         android:id="@+id/btn_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/btn_combined_chart"
-        android:text="自定义View" />
+        android:onClick="onClickEvent"
+        android:text="自定义View"/>
 
     <Button
         android:id="@+id/btn_change"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/btn_view"
-        android:text="@string/change_language" />
+        android:onClick="onClickEvent"
+        android:text="@string/change_language"/>
 
     <Button
         android:id="@+id/btn_skip_to_kotlin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/btn_change"
-        android:text="跳转kotlin" />
+        android:onClick="onClickEvent"
+        android:text="跳转kotlin"/>
 
     <Button
         android:id="@+id/btn_test_immersion"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:onClick="onClickEvent"
         android:layout_centerInParent="true"
-        android:text="沉浸式状态栏" />
+        android:text="沉浸式状态栏"/>
 
     <TextView
         android:id="@+id/text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/btn_test_immersion" />
+        android:layout_below="@id/btn_test_immersion"/>
 
     <TextView
         android:id="@+id/tv_show_db"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/text" />
+        android:layout_below="@id/text"/>
 
     <TextView
         android:id="@+id/test"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentRight="true"
-        android:text="test" />
+        android:text="test"/>
 
     <EditText
         android:id="@+id/editText"
@@ -79,5 +86,5 @@
         android:layout_alignParentBottom="true"
         android:ems="10"
         android:gravity="bottom"
-        android:inputType="number" />
+        android:inputType="number"/>
 </RelativeLayout>

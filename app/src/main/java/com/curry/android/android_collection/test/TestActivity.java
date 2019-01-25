@@ -1,4 +1,4 @@
-package com.curry.basic.ui.main;
+package com.curry.android.android_collection.test;
 
 import android.annotation.SuppressLint;
 import android.os.Bundle;
@@ -6,12 +6,11 @@ import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 
+import com.curry.android.android_collection.R;
 import com.curry.basic.HttpService;
 import com.curry.basic.http.OkHttpUtil;
 import com.curry.basic.http.ResultTO;
-import com.curry.basic.ui.main.MainContract;
 import com.curry.basic.utils.JsonUtil;
-import com.heinqi.curry_base.R;
 
 import org.reactivestreams.Subscriber;
 
@@ -34,7 +33,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 import static android.support.v4.util.Preconditions.checkNotNull;
 
-public class MainActivity extends AppCompatActivity implements MainContract.MainView {
+public class TestActivity extends AppCompatActivity implements MainContract.MainView {
 
     private MainContract.MainPresenter mPresenter;
     private String TAG = "curry";
@@ -43,7 +42,7 @@ public class MainActivity extends AppCompatActivity implements MainContract.Main
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_test);
 
 
         /*Observable observable = Observable.create(new ObservableOnSubscribe<String>() {

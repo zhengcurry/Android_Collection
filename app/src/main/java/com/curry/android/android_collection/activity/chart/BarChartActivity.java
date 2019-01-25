@@ -49,7 +49,7 @@ import butterknife.ButterKnife;
 import butterknife.OnClick;
 
 public class BarChartActivity extends AppCompatActivity implements OnChartValueSelectedListener {
-    @BindView(R.id.bar_chart)
+//    @BindView(R.id.bar_chart)
     BarChart barChart;
     BarData barData;
     BarDataSet barSet;
@@ -65,6 +65,7 @@ public class BarChartActivity extends AppCompatActivity implements OnChartValueS
     }
 
     private void initBarChart() {
+        barChart = findViewById(R.id.bar_chart);
         barChart.setOnChartValueSelectedListener(this);   //点击选中条目监听事件
         barChart.setPinchZoom(true);         //是否同时缩放
         barChart.setDrawBarShadow(false);     //每一个柱的背景

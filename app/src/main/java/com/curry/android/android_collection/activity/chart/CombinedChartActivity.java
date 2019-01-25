@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 
 import com.curry.android.android_collection.R;
 import com.curry.android.android_collection.chart.DayAxisValueFormatter;
@@ -45,7 +46,7 @@ import butterknife.ButterKnife;
 import butterknife.OnClick;
 
 public class CombinedChartActivity extends AppCompatActivity {
-    @BindView(R.id.combined_chart)
+    //    @BindView(R.id.combined_chart)
     CombinedChart combinedChart;
     private final int itemcount = 12;
     private XAxis xAxis;
@@ -61,6 +62,7 @@ public class CombinedChartActivity extends AppCompatActivity {
     }
 
     private void initChart() {
+        combinedChart = findViewById(R.id.combined_chart);
         combinedChart.getDescription().setEnabled(false);
         combinedChart.setBackgroundColor(Color.WHITE);
         combinedChart.setDrawGridBackground(false);
@@ -265,8 +267,8 @@ public class CombinedChartActivity extends AppCompatActivity {
     }
 
 
-    @OnClick(R.id.btn_change)
-    public void onClick() {
+    //    @OnClick(R.id.btn_change)
+    public void onClickEvent(View view) {
         setCombinedData();
     }
 
@@ -277,7 +279,7 @@ public class CombinedChartActivity extends AppCompatActivity {
             data.setData(generateLineData());
 
             xAxis.setAxisMinimum(0f);
-            xAxis.setAxisMaximum(data.getXMax()+0.25f);
+            xAxis.setAxisMaximum(data.getXMax() + 0.25f);
             combinedChart.animateX(1000, Easing.EasingOption.EaseInCubic);
         } else {
             flag = true;

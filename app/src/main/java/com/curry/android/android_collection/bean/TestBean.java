@@ -1,4 +1,4 @@
-package com.curry.basic.test;
+package com.curry.android.android_collection.bean;
 
 import org.litepal.LitePal;
 import org.litepal.crud.LitePalSupport;

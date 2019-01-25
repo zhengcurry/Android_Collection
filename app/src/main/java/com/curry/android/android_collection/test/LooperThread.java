@@ -1,4 +1,4 @@
-package com.curry.test;
+package com.curry.android.android_collection.test;
 
 
 import android.os.Bundle;

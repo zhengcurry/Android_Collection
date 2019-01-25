@@ -1,5 +1,5 @@
 apply plugin: 'com.android.application'
-
+//apply plugin: 'com.android.library'
 //android配置
 def config = rootProject.ext.android
 

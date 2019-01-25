@@ -1,11 +1,12 @@
-package com.curry.basic.test;
+package com.curry.android.android_collection.test;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 
-import com.heinqi.curry_base.R;
+import com.curry.android.android_collection.R;
+import com.curry.android.android_collection.bean.TestBean;
 
 import org.greenrobot.eventbus.EventBus;
 

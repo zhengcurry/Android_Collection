@@ -1,13 +1,11 @@
 package com.curry.android.android_collection.activity;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.res.Configuration;
 import android.content.res.Resources;
 import android.os.Bundle;
 import android.util.DisplayMetrics;
-import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.TextView;
@@ -17,8 +15,7 @@ import com.curry.android.android_collection.activity.chart.BarChartActivity;
 import com.curry.android.android_collection.activity.chart.CombinedChartActivity;
 import com.curry.android.android_collection.activity.chart.LineChartActivity;
 import com.curry.android.android_collection.base.BaseActivity;
-import com.curry.basic.test.TestBean;
-import com.curry.basic.widget.BackgroundDarkPopupWindow;
+import com.curry.android.android_collection.bean.TestBean;
 import com.example.makejarlibrary.MakeJar;
 import com.heinqi.curry_kotlin.KtMainActivity;
 
@@ -70,33 +67,32 @@ public class MainActivity extends BaseActivity {
         LitePal.saveAll(testBeanList);
     }
 
-    @OnClick({R.id.btn_test_immersion, R.id.btn_line_chart, R.id.btn_bar_chart,
-            R.id.btn_combined_chart, R.id.btn_view, R.id.btn_change, R.id.btn_skip_to_kotlin})
-    public void onClick(View view) {
-        switch (view.getId()) {
-            case R.id.btn_test_immersion:   //沉浸式状态栏
-                startActivity(new Intent(this, TestImmersionActivity.class));
-                break;
-            case R.id.btn_line_chart:       //折线图
-                startActivity(new Intent(this, LineChartActivity.class));
-                break;
-            case R.id.btn_bar_chart:        //柱状图
-                startActivity(new Intent(this, BarChartActivity.class));
-                break;
-            case R.id.btn_combined_chart:   //复合图
-                startActivity(new Intent(this, CombinedChartActivity.class));
-                break;
-            case R.id.btn_view:             //自定义View
-                startActivity(new Intent(this, CanvasActivity.class));
-                break;
-            case R.id.btn_skip_to_kotlin:   //自定义View
-                startActivity(new Intent(this, KtMainActivity.class));
-                break;
-            case R.id.btn_change:           //自定义View
-//                changeLanguage();
-                saveLanguage();
-                recreate();
-                break;
+//    @OnClick({R.id.btn_test_immersion, R.id.btn_line_chart, R.id.btn_bar_chart,
+//            R.id.btn_combined_chart, R.id.btn_view, R.id.btn_change, R.id.btn_skip_to_kotlin})
+    public void onClickEvent(View view) {
+        int i = view.getId();//沉浸式状态栏
+        if (i == R.id.btn_test_immersion) {
+            startActivity(new Intent(this, TestImmersionActivity.class));
+
+        } else if (i == R.id.btn_line_chart) {
+            startActivity(new Intent(this, LineChartActivity.class));
+
+        } else if (i == R.id.btn_bar_chart) {
+            startActivity(new Intent(this, BarChartActivity.class));
+
+        } else if (i == R.id.btn_combined_chart) {
+            startActivity(new Intent(this, CombinedChartActivity.class));
+
+        } else if (i == R.id.btn_view) {
+            startActivity(new Intent(this, CanvasActivity.class));
+
+        } else if (i == R.id.btn_skip_to_kotlin) {
+            startActivity(new Intent(this, KtMainActivity.class));
+
+        } else if (i == R.id.btn_change) {//                changeLanguage();
+            saveLanguage();
+            recreate();
+
         }
     }
 

@@ -1,4 +1,4 @@
-package com.curry.basic.test;
+package com.curry.android.android_collection.test;
 
 import android.content.ContentValues;
 import android.content.Intent;
@@ -9,7 +9,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-import com.heinqi.curry_base.R;
+import com.curry.android.android_collection.R;
+import com.curry.android.android_collection.bean.TestBean;
 
 import org.greenrobot.eventbus.EventBus;
 import org.greenrobot.eventbus.Subscribe;
@@ -106,8 +107,8 @@ public class Test1Activity extends AppCompatActivity implements View.OnClickList
     }
 
     private void initView() {
-        mText = findViewById(R.id.text);
-        mButton = findViewById(R.id.button);
+        mText = findViewById(R.id.text1);
+        mButton = findViewById(R.id.text1_button);
         mButton.setOnClickListener(this);
     }
 

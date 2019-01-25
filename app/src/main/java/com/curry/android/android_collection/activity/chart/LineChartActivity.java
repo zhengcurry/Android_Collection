@@ -42,7 +42,7 @@ import butterknife.OnClick;
  */
 public class LineChartActivity extends AppCompatActivity {
 
-    @BindView(R.id.line_chart)
+//    @BindView(R.id.line_chart)
     MyLineChart lineChart;
     LineData lineData;
     LineDataSet lineSet;
@@ -54,6 +54,7 @@ public class LineChartActivity extends AppCompatActivity {
         ButterKnife.bind(this);
 
 //        lineChart.setOnChartGestureListener(this);
+        lineChart = findViewById(R.id.line_chart);
         lineChart.setDrawGridBackground(false);
         lineChart.getDescription().setEnabled(false);// no description text
         lineChart.setTouchEnabled(true);    // enable touch gestures
@@ -302,7 +303,7 @@ public class LineChartActivity extends AppCompatActivity {
     }*/
 
     //按钮点击添加数据
-    @OnClick(R.id.button)
+//    @OnClick(R.id.button)
     public void addEntry(View view) {
         if (lineSet.getEntryCount() > 24) {
             return;

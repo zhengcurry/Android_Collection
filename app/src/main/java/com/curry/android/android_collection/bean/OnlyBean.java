@@ -1,4 +1,4 @@
-package com.curry.basic.test;
+package com.curry.android.android_collection.bean;
 
 /**
  * @Desc : 测试数据库表一对一
