@@ -1,0 +1,10 @@
+#### Android 9 (Pie,Api 28) 高版本新特性：https://developer.android.com/about/versions/pie/android-9.0
+> `显示屏缺口的支持（DisplayCutout）；`
+`适用于可绘制对象和位图的ImageDecoder；`
+`动画（引入AnimatedImageDrawable，用于绘制和显示 GIF 和 WebP 动画图像）；`
+`电源管理和隐私权变更；`
+利用Wi-Fi RTT进行室内定位；
+通知(提升短信体验、渠道设置、广播和请勿打扰)；
+多摄像头支持和摄像头更新；
+安全增项功能、自动填充框架、旋转、文本等...
+

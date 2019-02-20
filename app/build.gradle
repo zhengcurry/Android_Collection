@@ -53,6 +53,10 @@ android {
     }
 }
 
+repositories {
+    flatDir { dirs 'libs' }
+}
+
 dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
     testImplementation "junit:junit:$config.junitVersion"
@@ -64,9 +68,9 @@ dependencies {
     annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
     //图表
     implementation 'com.github.PhilJay:MPAndroidChart:v3.0.3'
-    implementation project(':testjarlibrary')
-    implementation files('libs/TestJar_V1.0.jar')
+    implementation files('libs/MakeJar_V1.1.jar')
     implementation project(':curry_base')
     implementation project(':qrcodelib')
     implementation project(':curry_kotlin')
+    implementation(name: 'testaarlibrary-release', ext: 'aar')
 }

@@ -1,6 +1,7 @@
 package com.curry.android.android_collection.test;
 
 import android.annotation.SuppressLint;
+import android.content.Context;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
@@ -39,11 +40,15 @@ public class TestActivity extends AppCompatActivity implements MainContract.Main
     private String TAG = "curry";
     private HttpService service;
 
+
+    private static Context context;//引起内存泄漏
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_test);
 
+        context = this;
 
         /*Observable observable = Observable.create(new ObservableOnSubscribe<String>() {
             @Override

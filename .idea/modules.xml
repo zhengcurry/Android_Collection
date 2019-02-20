@@ -9,7 +9,7 @@
       <module fileurl="file://$PROJECT_DIR$/curry_kotlin/curry_kotlin.iml" filepath="$PROJECT_DIR$/curry_kotlin/curry_kotlin.iml" />
       <module fileurl="file://$PROJECT_DIR$/makejarlibrary/makejarlibrary.iml" filepath="$PROJECT_DIR$/makejarlibrary/makejarlibrary.iml" />
       <module fileurl="file://$PROJECT_DIR$/qrcodelib/qrcodelib.iml" filepath="$PROJECT_DIR$/qrcodelib/qrcodelib.iml" />
-      <module fileurl="file://$PROJECT_DIR$/testjarlibrary/testjarlibrary.iml" filepath="$PROJECT_DIR$/testjarlibrary/testjarlibrary.iml" />
+      <module fileurl="file://$PROJECT_DIR$/testaarlibrary/testaarlibrary.iml" filepath="$PROJECT_DIR$/testaarlibrary/testaarlibrary.iml" />
     </modules>
   </component>
 </project>

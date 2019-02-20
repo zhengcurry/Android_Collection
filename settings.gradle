@@ -1,1 +1,1 @@
-include ':app', ':testjarlibrary', ':makejarlibrary', ':curry_base', ':curry_db', ':curry_kotlin','qrcodelib'
+include ':app', ':testaarlibrary', ':makejarlibrary', ':curry_base', ':curry_db', ':curry_kotlin', 'qrcodelib'

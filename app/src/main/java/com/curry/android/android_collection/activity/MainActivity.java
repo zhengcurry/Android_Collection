@@ -16,7 +16,10 @@ import com.curry.android.android_collection.activity.chart.CombinedChartActivity
 import com.curry.android.android_collection.activity.chart.LineChartActivity;
 import com.curry.android.android_collection.base.BaseActivity;
 import com.curry.android.android_collection.bean.TestBean;
+import com.curry.android.android_collection.test.TestActivity;
 import com.example.makejarlibrary.MakeJar;
+import com.example.testjarlibrary.TestAarActivity;
+import com.example.testjarlibrary.TestJar;
 import com.heinqi.curry_kotlin.KtMainActivity;
 
 import org.litepal.LitePal;
@@ -25,8 +28,6 @@ import org.litepal.tablemanager.Connector;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
-
-import butterknife.OnClick;
 
 public class MainActivity extends BaseActivity {
 
@@ -43,9 +44,14 @@ public class MainActivity extends BaseActivity {
 
         TextView test = findViewById(R.id.text);
         TextView tvShowDb = findViewById(R.id.tv_show_db);
-        test.setText(MakeJar.getStr());
+        test.setText(MakeJar.getStr() + "----" + TestJar.getStr());
+        test.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, TestAarActivity.class));
+            }
+        });
         tvShowDb.setText(LitePal.find(TestBean.class, 1).getText());
-
 
         test();
     }
@@ -67,7 +73,7 @@ public class MainActivity extends BaseActivity {
         LitePal.saveAll(testBeanList);
     }
 
-//    @OnClick({R.id.btn_test_immersion, R.id.btn_line_chart, R.id.btn_bar_chart,
+    //    @OnClick({R.id.btn_test_immersion, R.id.btn_line_chart, R.id.btn_bar_chart,
 //            R.id.btn_combined_chart, R.id.btn_view, R.id.btn_change, R.id.btn_skip_to_kotlin})
     public void onClickEvent(View view) {
         int i = view.getId();//沉浸式状态栏
@@ -92,6 +98,9 @@ public class MainActivity extends BaseActivity {
         } else if (i == R.id.btn_change) {//                changeLanguage();
             saveLanguage();
             recreate();
+
+        } else if (i == R.id.test) {
+            startActivity(new Intent(this, TestActivity.class));
 
         }
     }

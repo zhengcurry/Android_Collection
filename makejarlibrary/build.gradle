@@ -37,12 +37,12 @@ dependencies {
 }
 
 
-def _BASENAME = "TestJar"
-def _VERSION = "_V1.0"
+def _BASENAME = "MakeJar"
+def _VERSION = "_V1.1"
 //生成jar包的位置
 def _DestinationPath = "build"
-//待打包文件位置--不同的studio版本，路径不一样
-def zipFile = file('build/intermediates/intermediate-jars/debug/classes.jar')
+//待打包文件位置--不同的studio版本，路径不一样(设置拷贝的文件)
+def zipFile = file('build/intermediates/intermediate-jars/release/classes.jar')
 
 //删除已存在的版本
 task deleteBuild(type: Delete) {
