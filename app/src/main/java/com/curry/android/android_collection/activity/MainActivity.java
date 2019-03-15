@@ -147,7 +147,11 @@ public class MainActivity extends BaseActivity {
         return super.dispatchTouchEvent(ev);
     }
 
-
+    /**
+     * 屏幕适配
+     */
+    private void testScreenAdaptive() {
+    }
 }
 
 
