@@ -1,4 +1,5 @@
 apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
 
 //android配置
 def config = rootProject.ext.android
@@ -82,5 +83,9 @@ dependencies {
     api 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.42'
 
     api 'me.iwf.photopicker:PhotoPicker:0.9.12@aar'
+    api "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
 
+}
+repositories {
+    mavenCentral()
 }

@@ -34,10 +34,10 @@ android {
             keyPassword config.keyPassword
         }
         debug {
-            storeFile file(config.storeFile)
+            /*storeFile file(config.storeFile)
             storePassword config.storePassword
             keyAlias config.keyAlias
-            keyPassword config.keyPassword
+            keyPassword config.keyPassword*/
         }
     }
 

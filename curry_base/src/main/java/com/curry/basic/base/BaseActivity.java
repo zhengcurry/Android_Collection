@@ -369,4 +369,6 @@ public abstract class BaseActivity extends AppCompatActivity {
         Context context = MyContextWrapper.wrap(newBase, newLocale);
         super.attachBaseContext(context);
     }
+
+
 }

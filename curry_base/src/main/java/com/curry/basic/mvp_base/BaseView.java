@@ -1,4 +1,4 @@
-package com.heinqi.curry_base.mvp_base;
+package com.curry.basic.mvp_base;
 
 /**
  * @Desc :
